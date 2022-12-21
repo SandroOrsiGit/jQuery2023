@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>sun - rain</title>
+		<link rel="stylesheet" href="sun.css" />
+		<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+		<script>
+			window.jQuery ||
+				document.write('<script src="jquery-3.6.3.min.js"><\/script>');
+		</script>
+	</head>
+
+	<body>
+		<h1>Sun or Rain</h1>
+		<button>Sun</button>
+		<button>Rain</button>
+		<script>
+			$(document).ready(function () {
+				let $link = $("link");
+				console.log($link);
+
+				$("button").click(function () {
+					let $stylesheetNaam = $(this).text().toLowerCase();
+					$link.attr("href", $stylesheetNaam + ".css");
+				});
+			});
+		</script>
+	</body>
+</html>

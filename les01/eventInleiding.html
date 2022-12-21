@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+		<script>
+			window.jQuery ||
+				document.write('<script src="jquery-3.6.3.min.js"><\/script>');
+		</script>
+	</head>
+	<body>
+		<button id="active">Go to Google</button>
+		<p id="paragraaf"></p>
+		<button>Don't go to Google</button>
+		<script>
+			$(document).ready(function () {
+				$("#active").click(function () {
+					window.open("https://google.be", "_blank");
+				});
+				/*
+				$("#active").mouseenter(function () {
+					$("#paragraaf").html("klik om naar google te gaan");
+				});
+				$("#active").mouseleave(function () {
+					$("#paragraaf").html("");
+				});
+				*/
+				$("#active").hover(
+					function () {
+						$("#paragraaf").html("klik om naar google te gaan");
+					},
+					function () {
+						$("#paragraaf").html("");
+					}
+				);
+			});
+		</script>
+	</body>
+</html>
